@@ -27,4 +27,4 @@ An interactive web application that visualizes various algorithms including sort
 - Greedy Best-First Search
 
 ## Live Demo
-View Live Demo Soon <! --(https://CamerenGreen.github.io/algorithm-visualizer) --> <!-- Deploy it to Github Pages -->
+View Live Demo Soon  <!-- [Deploy it to Github Pages](https://CamerenGreen.github.io/algorithm-visualizer) -->
