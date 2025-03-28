@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Algorithm Visualizer</h1>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="sorting">Sorting</button>
+                <button class="tab-button" data-tab="searching">Searching</button>
+                <button class="tab-button" data-tab="pathfinding">Pathfinding</button>
+            </div>
+        </header>
+        
+        <!-- Sorting Tab Content -->
+        <div id="sorting" class="tab-content active">
+            <div class="controls">
+                <select id="sort-algorithm">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                    <option value="heapSort">Heap Sort</option>
+                </select>
+                
+                <select id="array-size">
+                    <option value="10">10 Elements</option>
+                    <option value="25" selected>25 Elements</option>
+                    <option value="50">50 Elements</option>
+                    <option value="100">100 Elements</option>
+                </select>
+                
+                <select id="data-type">
+                    <option value="random">Random</option>
+                    <option value="nearly-sorted">Nearly Sorted</option>
+                    <option value="reversed">Reversed</option>
+                    <option value="few-unique">Few Unique</option>
+                </select>
+                
+                <button id="generate-array">Generate New Array</button>
+                <button id="start-sort">Start Sorting</button>
+                <button id="pause-sort" disabled>Pause</button>
+                <button id="step-sort" disabled>Step</button>
+                
+                <div class="speed-control">
+                    <label for="sort-speed">Speed:</label>
+                    <input type="range" id="sort-speed" min="1" max="100" value="50">
+                </div>
+            </div>
+            
+            <div class="visualization-area" id="sorting-canvas"></div>
+        </div>
+        
+        <!-- Searching Tab Content -->
+        <div id="searching" class="tab-content">
+            <div class="controls">
+                <select id="search-algorithm">
+                    <option value="linearSearch">Linear Search</option>
+                    <option value="binarySearch">Binary Search</option>
+                    <option value="jumpSearch">Jump Search</option>
+                    <option value="interpolationSearch">Interpolation Search</option>
+                    <option value="exponentialSearch">Exponential Search</option>
+                </select>
+                
+                <input type="number" id="search-value" min="1" max="100" placeholder="Target value">
+                <button id="generate-search-array">Generate Array</button>
+                <button id="start-search">Start Search</button>
+                <button id="reset-search">Reset</button>
+                
+                <div class="speed-control">
+                    <label for="search-speed">Speed:</label>
+                    <input type="range" id="search-speed" min="1" max="100" value="50">
+                </div>
+            </div>
+            
+            <div class="visualization-area" id="searching-canvas"></div>
+            <div id="search-result"></div>
+        </div>
+        
+        <!-- Pathfinding Tab Content -->
+        <div id="pathfinding" class="tab-content">
+            <div class="controls">
+                <select id="pathfinding-algorithm">
+                    <option value="breadthFirstSearch">Breadth-First Search</option>
+                    <option value="depthFirstSearch">Depth-First Search</option>
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                    <option value="aStarSearch">A* Search</option>
+                    <option value="greedyBestFirstSearch">Greedy Best-First</option>
+                </select>
+                
+                <button id="generate-maze">Generate Maze</button>
+                <button id="clear-walls">Clear Walls</button>
+                <button id="clear-path">Clear Path</button>
+                <button id="start-pathfinding">Visualize</button>
+                
+                <div class="speed-control">
+                    <label for="path-speed">Speed:</label>
+                    <input type="range" id="path-speed" min="1" max="100" value="50">
+                </div>
+                
+                <div class="instructions">
+                    <p>Click and drag to place walls. Click start/node and drag to move it.</p>
+                </div>
+            </div>
+            
+            <div class="visualization-area" id="pathfinding-grid"></div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>Algorithm Information</h3>
+            <div id="algorithm-info"></div>
+            <div id="complexity-info"></div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
